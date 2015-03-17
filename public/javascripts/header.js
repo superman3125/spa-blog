@@ -1,4 +1,3 @@
-var blogURL = [];
 
 $(document).ready(function(){
 
