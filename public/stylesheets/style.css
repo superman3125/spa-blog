@@ -1,3 +1,22 @@
 body{
 	padding-top:41px;
 }
+/*主页*/
+.blog-home .thumbnails{
+  margin-left:0px;
+  width:80%;
+  margin:80px auto;
+}
+.blog-home .thumbnails img,.blog-home .thumbnails a{
+	cursor:pointer;
+}
+.blog-home .thumbnails h3{
+	text-align: center;
+}
+
+
+/*用户管理*/
+.blog-user{
+	width:80%;
+	margin:30px auto;
+}

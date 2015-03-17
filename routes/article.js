@@ -1,13 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-//用户管理
-router.get('/user',function(req, res){
-  res.render('userlist');
-});
-
-
-/* 获取用户列表. */
+/* GET users listing. */
 router.get('/userlist', function(req, res) {
     var db = req.db;
     db.collection('spa').find().toArray(function(err,items){

@@ -1,22 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
-//用户管理
-router.get('/user',function(req, res){
-  res.render('userlist');
-});
-
-
-/* 获取用户列表. */
-router.get('/userlist', function(req, res) {
+/*获取配置. */
+router.get('/getsetup', function(req, res) {
     var db = req.db;
     db.collection('spa').find().toArray(function(err,items){
     		res.json(items);
     });
 });
 
-/*保存用户信息*/
-router.post('/adduser',function(req,res){
+/*保存配置*/
+router.post('/addsetup',function(req,res){
 
 	var db = req.db;
 
@@ -30,8 +24,8 @@ router.post('/adduser',function(req,res){
 
 });
 
-/*删除用户*/
-router.delete('/deluser/:id',function(req,res){
+/*删除配置*/
+router.delete('/delsetup/:id',function(req,res){
       
       var db = req.db;
 
