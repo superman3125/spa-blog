@@ -1,0 +1,23 @@
+.blog-articles
+    h2 文章管理 
+    table.table.table-bordered.table-condensed.table-striped
+        tr
+          th(colspan="4")
+              div.input-append.pull-right
+                  input.span2(type="search",placeholder="请输入文章标题...")
+                  span.btn 搜索
+        tr
+          th.span1 序号
+          th 文章标题
+          th.span2 写作日期
+          th.span2 操作
+        tr
+          td
+          td
+          td
+          td.text-center
+            i.icon-eye-open(title="查看")
+            i.icon-pencil(title="编辑")
+            i.icon-minus(title="删除")
+
+script(src='/javascripts/articlesManage.js')

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 //用户管理
-router.get('/user',function(req, res){
+router.get('/userManage',function(req, res){
   res.render('userlist');
 });
 

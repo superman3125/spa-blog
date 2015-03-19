@@ -72,7 +72,15 @@ function showHome(){
 //文章管理
 function showArticle(){
     
+    
+    $.ajax({
+        type:'get',
+        url:'articles/articlesManage'
+    }).done(function(html){
 
+        $(".blog-body").html(html);
+        
+    });
 }
 
 //用户管理
@@ -80,7 +88,7 @@ function showUserlist(){
 
     $.ajax({
         type:'get',
-        url:'users/user'
+        url:'users/userManage'
     }).done(function(html){
 
         $(".blog-body").html(html);

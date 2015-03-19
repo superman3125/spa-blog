@@ -1,12 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/userlist', function(req, res) {
-    var db = req.db;
-    db.collection('spa').find().toArray(function(err,items){
-    		res.json(items);
-    });
+/* 显示所有文章. */
+router.get('/articlesManage', function(req, res) {
+
+    res.render('articlesManage');
+    
 });
 
 /*保存用户信息*/

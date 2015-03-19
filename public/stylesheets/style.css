@@ -15,8 +15,18 @@ body{
 }
 
 
-/*用户管理*/
-.blog-user{
+/*用户管理与文章管理*/
+.blog-user,.blog-articles{
 	width:80%;
 	margin:30px auto;
+}
+
+
+
+/*文章管理*/
+.table th,.table .text-center{
+   text-align:center!important;
+}
+.table [class^="icon"]{
+	cursor:pointer;
 }
