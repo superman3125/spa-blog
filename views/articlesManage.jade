@@ -1,16 +1,18 @@
 .blog-articles
-    h2 文章管理 
-    table.table.table-bordered.table-condensed.table-striped
+    h3 文章管理 
+    table#articlelist.table.table-bordered.table-condensed.table-striped
+      thead
         tr
           th(colspan="4")
               div.input-append.pull-right
                   input.span2(type="search",placeholder="请输入文章标题...")
-                  span.btn 搜索
+                  span#searchArticle.btn 搜索
         tr
           th.span1 序号
           th 文章标题
           th.span2 写作日期
           th.span2 操作
+      tbody
         tr
           td
           td
@@ -19,5 +21,20 @@
             i.icon-eye-open(title="查看")
             i.icon-pencil(title="编辑")
             i.icon-minus(title="删除")
+    h3 发表文章
+    form#articleForm.form-horizontal
+        .control-group
+            .control-label 文章标题
+            .controls
+                input.span4(id="articleTitle",type="text",placeholder="请输入文章标题...")
+        .control-group
+            .control-label 内容
+            .controls
+                textarea#articleContent
+        .control-group
+            .controls
+                small#TextCount 
+                span#addArticle.btn.btn-info.pull-right 保存
 
+script(src='/ckeditor_4.3.4_full/ckeditor/ckeditor.js')
 script(src='/javascripts/articlesManage.js')

@@ -1,5 +1,12 @@
+/*公用*/
 body{
 	padding-top:41px;
+}
+.form-horizontal .control-label {
+  width: 60px;
+}
+.form-horizontal .controls {
+  margin-left: 80px;
 }
 /*主页*/
 .blog-home .thumbnails{
@@ -9,10 +16,18 @@ body{
 }
 .blog-home .thumbnails img,.blog-home .thumbnails a{
 	cursor:pointer;
+	-webkit-transition: margin 0.5s ease-out;
+    -moz-transition: margin 0.5s ease-out;
+    -khtml-transition: margin 0.5s ease-out; 
+}
+.blog-home .thumbnails img:hover{
+	margin-left:70px;
 }
 .blog-home .thumbnails h3{
 	text-align: center;
 }
+
+
 
 
 /*用户管理与文章管理*/
@@ -30,3 +45,4 @@ body{
 .table [class^="icon"]{
 	cursor:pointer;
 }
+

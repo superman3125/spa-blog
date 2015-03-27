@@ -57,7 +57,7 @@ function showHome(){
         $.each(data,function(){
         	panels +='<li class="span3">';
             panels +='<a href="#" rel='+this.link+' class="thumbnail">';
-            panels +='<img src="'+this.src+'" alt="'+this.title+'"/>';
+            panels +='<img src="'+this.imgSrc+'" alt="'+this.title+'"/>';
             panels +='<h3>'+this.title+'</h3>';
             panels +='</a>';
             panels +='</li>';
