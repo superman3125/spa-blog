@@ -18,11 +18,13 @@ router.get('/articleList', function(req, res) {
 });
 
 /*查找文章*/
-router.get('/searchArticle',function(req,res){
+router.get('/searchArticle/:articleName',function(req,res){
    
     var db = req.db;
-    var articleName = req.body.articleName;
-    db.collection('articles').find({name:articleName}).toArray(function(err,items){
+    var articleName = req.params.articleName;  
+    //正则匹配模糊查询 
+    var reg = new RegExp(articleName,"i");
+    db.collection('articles').find({title:reg}).toArray(function(err,items){
         res.json(items);
     });
 

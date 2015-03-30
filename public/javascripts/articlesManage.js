@@ -31,8 +31,14 @@ function populateArticleTable(){
     //表格内容
     var tableContent = '';
 
+    var articleName = $("input#searchArticle").val();
+
+    var url =  articleName ? "/articles/searchArticle/"+articleName : "/articles/articleList";
+
+    console.log(url);
+
     //ajax请求数据
-    $.getJSON('/articles/articleList',function(data){
+    $.getJSON(url,function(data){
 
         //保存用户数据到全局
         articleListData = data;
@@ -56,7 +62,7 @@ function populateArticleTable(){
 //搜索文章
 function searchArticle(){
 
-    var srticleName = $(this).val();
+    populateArticleTable();
 
 }
 //编辑文章
