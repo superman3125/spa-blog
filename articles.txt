@@ -1,0 +1,33 @@
+{
+  "_id" : ObjectId("55151b079a4d091a7c9c5387"),
+  "title" : "关于Bootstrap",
+  "content" : "Bootstrap，来自 Twitter，是目前最受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。[1] 它由Twitter的设计师Mark Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目",
+  "author" : "baidu",
+  "createDate" : "",
+  "motifyDate" : "",
+  "tag" : ""
+},
+{
+  "_id" : ObjectId("55152ab0b40f2bf01fb5b7b3"),
+  "title" : "第一篇文章",
+  "content" : "mogodb插入的第一篇文章测试~~~~",
+  "createDate" : "2015:3:27  18:2:24",
+  "author" : "",
+  "tag" : ""
+},
+{
+  "_id" : ObjectId("55152c36b40f2bf01fb5b7b4"),
+  "title" : "GIT（分布式版本控制系统）",
+  "content" : "<div class=\"para\" style=\"margin: 15px 0px 5px; text-indent: 2em; line-height: 24px; font-family: arial, 宋体, sans-serif; font-size: 14px;\">Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。<span style=\"color:rgb(51, 102, 204)\">[1]</span>&nbsp;Git的读音为/gɪt/。</div>\n\n<div class=\"para\" style=\"margin: 15px 0px 5px; text-indent: 2em; line-height: 24px; font-family: arial, 宋体, sans-serif; font-size: 14px;\">Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。<span style=\"color:rgb(51, 102, 204)\">[2]</span>&nbsp;Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</div>\n\n<div class=\"para\" style=\"margin: 15px 0px 5px; text-indent: 2em; line-height: 24px; font-family: arial, 宋体, sans-serif; font-size: 14px;\">Torvalds 开始着手开发 Git 是为了作为一种过渡方案来替代 BitKeeper，后者之前一直是 Linux 内核开发人员在全球使用的主要源代码工具。开放源码社区中的有些人觉得 BitKeeper 的许可证并不适合开放源码社区的工作，因此 Torvalds 决定着手研究许可证更为灵活的版本控制系统。尽管最初 Git 的开发是为了辅助 Linux 内核开发的过程，但是我们已经发现在很多其他自由软件项目中也使用了 Git。例如 最近就迁移到 Git 上来了，很多 Freedesktop 的项目也迁移到了 Git 上。<span style=\"color:rgb(51, 102, 204)\">[2]</span>&nbsp;</div>\n",
+  "createDate" : "2015:3:27  18:8:54",
+  "author" : "",
+  "tag" : ""
+},
+{
+  "_id" : ObjectId("55152c7cb40f2bf01fb5b7b5"),
+  "title" : "jquery",
+  "content" : "<div class=\"para\" style=\"margin: 15px 0px 5px; text-indent: 2em; line-height: 24px; font-family: arial, 宋体, sans-serif; font-size: 14px;\"><a href=\"http://baike.baidu.com/view/1020297.htm\" target=\"_blank\">Jquery</a>是继<a href=\"http://baike.baidu.com/view/1217697.htm\" target=\"_blank\">prototype</a>之后又一个优秀的<a href=\"http://baike.baidu.com/view/16168.htm\" target=\"_blank\">Javascript</a>库。它是轻量级的js库 ，它兼容<a href=\"http://baike.baidu.com/view/1713027.htm\" target=\"_blank\">CSS3</a>，还兼容各种<a href=\"http://baike.baidu.com/view/7718.htm\" target=\"_blank\">浏览器</a>（IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+），jQuery2.0及后续版本将不再支持IE6/7/8浏览器。jQuery使用户能更方便地处理<a href=\"http://baike.baidu.com/view/692.htm\" target=\"_blank\">HTML</a>（<a href=\"http://baike.baidu.com/view/5286041.htm\" target=\"_blank\">标准通用标记语言</a>下的一个应用）、events、实现动画效果，并且方便地为网站提供AJAX交互。jQuery还有一个比较大的优势是，它的文档说明很全，而且各种应用也说得很详细，同时还有许多成熟的<a href=\"http://baike.baidu.com/view/18979.htm\" target=\"_blank\">插件</a>可供选择。jQuery能够使用户的html页面保持代码和html内容分离，也就是说，不用再在html里面插入一堆js来调用命令了，只需要定义id即可。</div>\n\n<div class=\"para\" style=\"margin: 15px 0px 5px; text-indent: 2em; line-height: 24px; font-family: arial, 宋体, sans-serif; font-size: 14px;\">jQuery是一个兼容多浏览器的<a href=\"http://baike.baidu.com/view/16168.htm\" target=\"_blank\">javascript</a>库，核心理念是write less,do more(写得更少,做得更多)。jQuery在2006年1月由美国人<a href=\"http://baike.baidu.com/view/3141971.htm\" target=\"_blank\">John Resig</a>在纽约的<a href=\"http://baike.baidu.com/view/1135515.htm\" target=\"_blank\">barcamp</a>发布，吸引了来自世界各地的众多JavaScript高手加入，由Dave Methvin率领团队进行开发。如今，<a href=\"http://baike.baidu.com/view/1020297.htm\" target=\"_blank\">jQuery</a>已经成为最流行的<a href=\"http://baike.baidu.com/view/16168.htm\" target=\"_blank\">javascript</a>库，在世界前10000个访问最多的网站中，有超过55%在使用jQuery。</div>\n\n<div class=\"para\" style=\"margin: 15px 0px 5px; text-indent: 2em; line-height: 24px; font-family: arial, 宋体, sans-serif; font-size: 14px;\">jQuery是免费、开源的，使用<a href=\"http://baike.baidu.com/view/74918.htm\" target=\"_blank\">MIT</a>许可协议。jQuery的<a href=\"http://baike.baidu.com/view/135635.htm\" target=\"_blank\">语法</a>设计可以使开发者更加便捷，例如操作<a href=\"http://baike.baidu.com/view/55621.htm\" target=\"_blank\">文档</a>对象、选择<a href=\"http://baike.baidu.com/view/14806.htm\" target=\"_blank\">DOM</a>元素、制作<a href=\"http://baike.baidu.com/view/7262.htm\" target=\"_blank\">动画</a>效果、事件处理、使用<a href=\"http://baike.baidu.com/view/1641.htm\" target=\"_blank\">Ajax</a>以及其他功能。除此以外，jQuery提供API让开发者编写插件。其模块化的使用方式使开发者可以很轻松的开发出功能强大的静态或动态网页。</div>\n",
+  "createDate" : "2015:3:27  18:10:03",
+  "author" : "",
+  "tag" : ""
+}

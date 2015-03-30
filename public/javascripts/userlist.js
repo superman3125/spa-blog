@@ -14,6 +14,7 @@ $(document).ready(function(){
 
     //删除事件
     $("#userList table tbody").on('click','td a.linkdeleteuser',delUser);
+
 });
 
 //显示表格函数
@@ -143,6 +144,7 @@ function delUser(event){
 
     	//更新表格
         populateTable();
+        
     });
 
 

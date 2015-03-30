@@ -8,6 +8,7 @@ body{
 .form-horizontal .controls {
   margin-left: 80px;
 }
+
 /*主页*/
 .blog-home .thumbnails{
   margin-left:0px;
@@ -44,5 +45,8 @@ body{
 }
 .table [class^="icon"]{
 	cursor:pointer;
+}
+span#addArticle,span#clearArticle{
+	margin-left:5px;
 }
 

@@ -1,0 +1,9 @@
+{
+  "_id" : ObjectId("5507e708a2a615981c80dea2"),
+  "username" : "Superman",
+  "email" : "superman@qq.com",
+  "fullname" : "黄智超",
+  "age" : "27",
+  "location" : "广州",
+  "gender" : "男"
+}
