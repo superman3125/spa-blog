@@ -11,8 +11,13 @@ router.get('/articlesManage', function(req, res) {
 
 /*获取文章*/
 router.get('/articleList', function(req, res) {
+
+    //获取分页参数
+    var pageNumber = parseInt(req.query.pageNumber);
+    var nPerPage = parseInt(req.query.nPerPage);
+
     var db = req.db;
-    db.collection('articles').find().toArray(function(err,items){
+    db.collection('articles').find().skip(pageNumber > 0 ? ((pageNumber-1)*nPerPage) : 0).limit(nPerPage).toArray(function(err,items){       
         res.json(items);
     });
 });

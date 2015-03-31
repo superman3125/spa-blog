@@ -38,7 +38,7 @@ function populateArticleTable(){
     console.log(url);
 
     //ajax请求数据
-    $.getJSON(url,function(data){
+    $.getJSON(url,{pageNumber:1,nPerPage:2},function(data){
 
         //保存用户数据到全局
         articleListData = data;
