@@ -18,9 +18,18 @@
           td
           td
           td.text-center
-            i.icon-eye-open(title="查看")
-            i.icon-pencil(title="编辑")
-            i.icon-minus(title="删除")
+      tfoot
+        tr
+          td(colspan=5)
+              .pagination
+                ul
+                  li
+                    a <<
+                  li
+                    a 1
+                  li
+                    a >>
+
     h3 发表文章
     form#articleForm.form-horizontal
         .control-group

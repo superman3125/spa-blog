@@ -1,4 +1,13 @@
 .blog-user
+    h3 用户列表
+    #userList
+        table.table.table-bordered.table-condensed.table-striped.table-hover
+            thead
+              tr.success
+                th 用户名
+                th 邮箱
+                th 删除?
+            tbody
     h3 用户信息
     p
         strong 姓名:
@@ -12,27 +21,18 @@
         br
         strong 位置:
         |    <span id="userInfoLocation"></span>
-    h3 用户列表
-    #userList
-        table.table.table-bordered.table-condensed.table-striped.table-hover
-            thead
-              tr.success
-                th 用户名
-                th 邮箱
-                th 删除?
-            tbody
 
     h3 新增用户
     #addUser
         fieldset
-            input#inputUserName(type="text",placeholder="Username")
-            input#inputUserEmail(type="text",placeholder="Useremail")
+            input#inputUserName(type="text",placeholder="用户名")
+            input#inputUserEmail(type="text",placeholder="用户邮件")
             br
-            input#inputUserFullname(type="text",placeholder="Full Name")
-            input#inputUserAge(type="text",placeholder="Age")
+            input#inputUserFullname(type="text",placeholder="全称")
+            input#inputUserAge(type="text",placeholder="年龄")
             br
-            input#inputUserLocation(type="text",placeholder="Location")
-            input#inputUserGender(type="text",placeholder="gender")
+            input#inputUserLocation(type="text",placeholder="住址")
+            input#inputUserGender(type="text",placeholder="性别")
             br
             button#btnAddUser.btn.btn-info 新增用户
 

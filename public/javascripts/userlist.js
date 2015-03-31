@@ -118,7 +118,7 @@ function addUser(event){
 
 
     } else{
-    	alert("plaese fill all input!!");
+    	alert("请填写所有表单!!");
     	return false;
     }
 }
