@@ -4,8 +4,15 @@ var router = express.Router();
 
 /* 返回文章页面. */
 router.get('/articlesManage', function(req, res) {
+    
+    //文章总数
+    var db = req.db;
 
-    res.render('articlesManage');
+    db.collection('articles').count(function(err, data) {
+         res.render('articlesManage',{'totalRecords':data,size:5});
+    });
+   
+
     
 });
 
@@ -15,11 +22,18 @@ router.get('/articleList', function(req, res) {
     //获取分页参数
     var pageNumber = parseInt(req.query.pageNumber);
     var nPerPage = parseInt(req.query.nPerPage);
+    var skip = pageNumber > 0 ? ((pageNumber-1)*nPerPage) : 0;
 
     var db = req.db;
-    db.collection('articles').find().skip(pageNumber > 0 ? ((pageNumber-1)*nPerPage) : 0).limit(nPerPage).toArray(function(err,items){       
+    db.collection('articles').find().skip(skip).limit(nPerPage).toArray(function(err,items){
+        for (var i = 0,l = items.length; i < l; i++) {
+            items[i].articleIndex = i+skip+1;
+        };            
         res.json(items);
     });
+
+    
+
 });
 
 /*查找文章*/

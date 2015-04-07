@@ -21,14 +21,10 @@
       tfoot
         tr
           td(colspan=5)
-              .pagination
-                ul
-                  li
-                    a <<
-                  li
-                    a 1
-                  li
-                    a >>
+              <div id="pager" class="text-center"></div>
+              <input type="hidden" value='#{totalRecords}' id="totalRecords">
+              <input type="hidden" value='#{size}'  id="size">
+              
 
     h3 发表文章
     form#articleForm.form-horizontal
@@ -45,6 +41,7 @@
                 small#TextCount 
                 span#clearArticle.btn.btn-info.pull-right 清空
                 span#addArticle.btn.btn-info.pull-right 保存
-
+link(rel='stylesheet',href='/bootstrap/v3/bootstrap.css')
 script(src='/ckeditor_4.3.4_full/ckeditor/ckeditor.js')
+script(src='/bootstrap/plugin/bootpag/jquery.bootpag.js')
 script(src='/javascripts/articlesManage.js')

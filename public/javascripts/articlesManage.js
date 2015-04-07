@@ -6,7 +6,10 @@ $(document).ready(function(){
     article = CKEDITOR.replace( 'articleContent' );
 
     //显示文章列表
-    populateArticleTable();
+    populateArticleTable(1);
+
+    //分页初始化
+    pagation();
 
     //编辑文章
     $(".blog-articles").on('click','a.linkshowuser',modArticle)
@@ -22,11 +25,22 @@ $(document).ready(function(){
 
     //清空
 	$(".blog-articles").on('click',"span#clearArticle",clearArticle)
+
 });
 
+function pagation(){
+    $('#pager').bootpag({
+    total: Math.ceil($("#totalRecords").val()/$("#size").val()),
+    page : 1,
+    maxVisible : 10,
+    href: "#page-{{number}}",
+    }).on("page", function(event, /* page number here */ num) {
+        populateArticleTable(num);    
+    });
+}
 
 //显示文章
-function populateArticleTable(){
+function populateArticleTable(page){
 
     //表格内容
     var tableContent = '';
@@ -35,17 +49,17 @@ function populateArticleTable(){
 
     var url =  articleName ? "/articles/searchArticle/"+articleName : "/articles/articleList";
 
-    console.log(url);
+    //console.log(url);
 
     //ajax请求数据
-    $.getJSON(url,{pageNumber:1,nPerPage:2},function(data){
+    $.getJSON(url,{pageNumber:page,nPerPage:$("#size").val()},function(data){
 
         //保存用户数据到全局
         articleListData = data;
 
-        $.each(data,function(i){
+        $.each(data,function(){
             tableContent += '<tr>';
-            tableContent += '<td class="text-center">'+(i+1)+'</td>';
+            tableContent += '<td class="text-center">'+this.articleIndex+'</td>';
             tableContent += '<td><a href="#" class="linkshowuser" rel="'+this.title+'">'+this.title+'</a></td>';
             tableContent += '<td class="text-center">'+this.createDate+'</td>';          
             tableContent += '<td class="text-center">'+this.modifiedDate+'</td>';          
@@ -172,7 +186,7 @@ function saveArticle(event){
                 article.setData('');
 
                 //更新文章列表
-                populateArticleTable();
+                populateArticleTable(1);
             }
             else{
 
@@ -208,7 +222,7 @@ function deleteArticle(event){
         }
 
         //更新表格
-        populateArticleTable();
+        populateArticleTable(1);
         
     });
 
