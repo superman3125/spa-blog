@@ -9,7 +9,7 @@ router.get('/articlesManage', function(req, res) {
     var db = req.db;
 
     db.collection('articles').count(function(err, data) {
-         res.render('articlesManage',{'totalRecords':data,size:5});
+         res.render('articlesManage',{'totalRecords':data,size:7});
     });
    
 
@@ -38,12 +38,20 @@ router.get('/articleList', function(req, res) {
 
 /*查找文章*/
 router.get('/searchArticle/:articleName',function(req,res){
-   
+    
+    //获取分页参数
+    var pageNumber = parseInt(req.query.pageNumber);
+    var nPerPage = parseInt(req.query.nPerPage);
+    var skip = pageNumber > 0 ? ((pageNumber-1)*nPerPage) : 0;
+    
     var db = req.db;
     var articleName = req.params.articleName;  
     //正则匹配模糊查询 
     var reg = new RegExp(articleName,"i");
-    db.collection('articles').find({title:reg}).toArray(function(err,items){
+    db.collection('articles').find({title:reg}).skip(skip).limit(nPerPage).toArray(function(err,items){
+        for (var i = 0,l = items.length; i < l; i++) {
+            items[i].articleIndex = i+skip+1;
+        };            
         res.json(items);
     });
 

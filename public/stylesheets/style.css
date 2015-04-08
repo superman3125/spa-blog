@@ -1,6 +1,6 @@
 /*公用*/
 body{
-	padding-top:41px;
+	overflow: hidden;
 }
 .form-horizontal .control-label {
   width: 60px;
@@ -8,7 +8,10 @@ body{
 .form-horizontal .controls {
   margin-left: 80px;
 }
-
+.contentScroll{
+	margin-top: 41px;
+	overflow-y: auto;
+}
 /*主页*/
 .blog-home .thumbnails{
   margin-left:0px;
@@ -26,6 +29,9 @@ body{
 }
 .blog-home .thumbnails h3{
 	text-align: center;
+}
+.blog-home .thumbnails li{
+	margin-top:30px;
 }
 
 

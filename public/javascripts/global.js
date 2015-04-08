@@ -1,4 +1,5 @@
-var tools = {};
+var spa = {};
+/*var tools = {};
 
 tools.customDateTime = function(){
     
@@ -13,4 +14,21 @@ tools.customDateTime = function(){
     var datetime = vYear + ":" + vMon + ":" + vDay + "  " + h + ":" + m +":" + se;
     
     return datetime;
+}*/
+$(function(){
+
+	//contentScroll height
+	spa.init_contextScrollHeight();
+
+});
+
+/*
+* 在样式去除主体body滚动条后，为contextScroll盒子增加滚动条，已消除切换导航栏时带来的闪动
+*/
+spa.init_contextScrollHeight = function(){
+
+	var height = $(document).height()-41;
+
+	$(".contentScroll").css('height',height);
+
 }
